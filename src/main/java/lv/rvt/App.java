@@ -18,9 +18,17 @@ public class App
        // System.out.println("Sveiks " + name);
 
         // Mēs gribam uzzināt no lietāja: Vards, Uzvards, Gruppu
-        // un beigās printēt visu kopā vienā rindiņa 
+        // un beigās printēt visu kopā vienā rindiņā
 
-       
+       System.out.println("Ievadi savu vardu:");
+       String name = scanner.nextLine();
+       System.out.println("Ievadi savu uzvardu:");
+       String surname = scanner.nextLine();
+       System.out.println("Ievadi savu gruppu:");
+       String grupa = scanner.nextLine();
+
+       System.out.println(name + " " + surname + " " + grupa);
+
     }
 
 }
