@@ -1,45 +1,33 @@
 package lv.rvt;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class App 
 {
     public static void main( String[] args )
     {
-        // System.out.println("Hello RVT!");
-        // Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        //String userInput = scanner.nextLine();
+        //System.out.println(userInput);
+        //System.out.println("Ka tevi sauc?");
 
-       System.out.println("Chicken:");
-       int Chicken = 3;
-       System.out.println(Chicken);
+        // String start = "My name is ";
+        // int someDigit = 99;
+        // String end = ", Glebs Litvjakovs";
+        //System.out.println("Mani EURO: " + (99 + 100));
 
-       System.out.println("Bacon (kg):");
-       double Bacon = 5.5;
-       System.out.println(Bacon);
+        System.out.println("Ievadi savu vārdu: ");
 
-       System.out.println("Tractor:");
-       String Tractor = "None!";
-       System.out.println(Tractor);
+        String name = scanner.nextLine();
 
-       System.out.println();
+        System.out.println("Ievadi savu uzvārdu: ");
+        String lastname = scanner.nextLine();
 
-      System.out.println("And finally, a summary:");
-      System.out.println(Chicken);
-      System.out.println(Bacon);
-      System.out.println(Tractor);
+        System.out.println("Ievadi savu grupu: ");
+        String group = scanner.nextLine();
+
+        System.out.println("Students: "+ name + " " + lastname + ", grupa: " + group);
+        // Diezgan labi )
     }
 
 }
-
-
-// Uzdevums 0
-        // Mēs gribam uzzināt no lietāja: Vards, Uzvards, Gruppu
-        // un beigās printēt visu kopā vienā rindiņā
-       // System.out.println("Ievadi savu vardu:");
-       // String name = scanner.nextLine();
-       // System.out.println("Ievadi savu uzvardu:");
-       // String surname = scanner.nextLine();
-       // System.out.println("Ievadi savu gruppu:");
-       // String grupa = scanner.nextLine();
-
-      // System.out.println(name + " " + surname + " " + grupa);
