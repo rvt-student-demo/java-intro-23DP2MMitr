@@ -14,7 +14,10 @@ public class App
         System.out.println("Give the second number: ");
         int nr2 = Integer.valueOf(scanner.nextLine());
 
-        System.out.println(nr1 + " + " + nr2 + " = " + (nr1 + nr2));
+        System.out.println(nr1 + " + " + nr2 + " = " + ((double) nr1 + nr2));
+        System.out.println(nr1 + " - " + nr2 + " = " + ((double) nr1 - nr2));
+        System.out.println(nr1 + " * " + nr2 + " = " + ((double) nr1 * nr2));
+        System.out.println(nr1 + " / " + nr2 + " = " + ((double) nr1 / nr2));
         
         
         
