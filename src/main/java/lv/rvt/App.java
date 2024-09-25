@@ -7,19 +7,22 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
+        int kopa = 0;
+        int summa = 0; 
+
         while (true) {
-            System.out.println("Give a number: ");
-            int number = Integer.valueOf(scanner.nextLine());
-            if (number < 0) {
-                System.out.println("Unsuitable number");
+            System.out.println("Give number:");
+            int nr = Integer.valueOf(scanner.nextLine());
+            if (nr != 0) {
+                kopa = kopa + 1;
+                summa = summa + nr;
             }
-            if (number == 0) {
+            if (nr == 0){
                 break;
             }
-            if (number > 0) {
-                System.out.println(number * number);
-            }
         }
+        System.out.println("Number of numbers: " + kopa);
+        System.out.println("Sum of the numbers: " + summa);
     }
      
 }
