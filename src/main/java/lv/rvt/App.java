@@ -7,11 +7,19 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a number: ");
         int nr = Integer.valueOf(scanner.nextLine());
-
-        for(;nr < 101; nr++) {
-            System.out.println(nr);
+        int end = nr;
+        int start = 1;
+        if (nr == 0){
+            nr = 1;
         }
+        else{
+            for(int i = start; i < end; i++) {
+                nr *= i;
+            }
+        }
+        System.out.println("Factorial: " + nr);
     }
      
 }
