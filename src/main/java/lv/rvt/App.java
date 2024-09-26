@@ -7,22 +7,11 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        int kopa = 0;
-        int summa = 0; 
+        int nr = Integer.valueOf(scanner.nextLine());
 
-        while (true) {
-            System.out.println("Give number:");
-            int nr = Integer.valueOf(scanner.nextLine());
-            if (nr != 0) {
-                kopa = kopa + 1;
-                summa = summa + nr;
-            }
-            if (nr == 0){
-                break;
-            }
+        for(;nr < 101; nr++) {
+            System.out.println(nr);
         }
-        System.out.println("Number of numbers: " + kopa);
-        System.out.println("Sum of the numbers: " + summa);
     }
      
 }
