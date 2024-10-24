@@ -5,6 +5,40 @@ import java.util.*;
 public class App
 {
 public static void main( String[] args ) {
+        Scanner scanner = new Scanner(System.in);
+        Person Igors = new Person("Igors");
+        Person Glebs = new Person("Glebs");
+
+        Product Banana = new Product("Banana",1.1,13);
+
+        Igors.printPerson();
+        Glebs.printPerson();
+        Banana.printProduct();
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+        /*   Scanner scanner = new Scanner(System.in);
+        Account ac = new Account("Gļebs", 0);
+        ac.deposit(20);
+        System.out.println("Gļebs poket tagad ir: " + ac.balance() + " Eur");
+
+        System.out.println();
+
+        Account MetthewsAccount = new Account("Matthew", 1000);
+        Account MyAccount = new Account("Matthews", 0);
+        MetthewsAccount.withdrawal(100);
+        MyAccount.deposit(100);
+        System.out.println("Metthew: " + MetthewsAccount);
+        System.out.println("Me: " + MyAccount);   */
+
      /* Stars.printStars(5);
         Stars.printStars(3);
         Stars.printStars(9);
@@ -23,14 +57,10 @@ public static void main( String[] args ) {
         System.out.println();
 
         Stars.printRightTriangle(4);
-        System.out.println(); */
+        System.out.println(); 
 
-        Stars.christmasTree(10);
-
-
+        Stars.christmasTree(10); */
         
-
-
-
+        
 }
 }
