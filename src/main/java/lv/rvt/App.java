@@ -6,6 +6,24 @@ public class App
 {
 public static void main( String[] args ) {
         Scanner scanner = new Scanner(System.in);
+        DecreasingCounter counter = new DecreasingCounter(100);
+        
+        counter.printValue();
+
+        counter.reset();
+        counter.printValue();
+
+        counter.decrement();
+        counter.printValue();
+  
+  
+
+
+
+  
+  
+  
+        /*      Scanner scanner = new Scanner(System.in);
         Person Igors = new Person("Igors");
         Person Glebs = new Person("Glebs");
 
@@ -13,16 +31,7 @@ public static void main( String[] args ) {
 
         Igors.printPerson();
         Glebs.printPerson();
-        Banana.printProduct();
-     
-     
-     
-     
-     
-     
-     
-     
-     
+        Banana.printProduct(); */     
      
      
         /*   Scanner scanner = new Scanner(System.in);
