@@ -7,7 +7,27 @@ public class App
 public static void main( String[] args ) {
         Scanner scanner = new Scanner(System.in);
 
-        Statistics statistics = new Statistics();
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+        System.out.println(paulsCard);
+        System.out.println(mattsCard);
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+        System.out.println(paulsCard);
+        System.out.println(mattsCard);
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+        mattsCard.addMoney(50);
+        System.out.println(paulsCard);
+        System.out.println(mattsCard);
+
+
+        
+ 
+        /*       Statistics statistics = new Statistics();
         System.out.println("Enter number:");
         int nr = Integer.valueOf(scanner.nextLine());
         while (true) {
@@ -19,17 +39,8 @@ public static void main( String[] args ) {
         }
         System.out.println("Sum: " + statistics.sum());
         System.out.println("Sum of even numbers: " + statistics.even());
-        System.out.println("Sum of odd numbers: " + statistics.odd());
+        System.out.println("Sum of odd numbers: " + statistics.odd()); */
         
-
-
-
-
-  
-  
-  
-  
-
   
         /*   
         Agent_1 bond = new Agent_1("James", "Bond");
