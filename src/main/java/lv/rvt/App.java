@@ -6,21 +6,39 @@ public class App
 {
 public static void main( String[] args ) {
         Scanner scanner = new Scanner(System.in);
+
+        Statistics statistics = new Statistics();
+        System.out.println("Enter number:");
+        int nr = Integer.valueOf(scanner.nextLine());
+        while (true) {
+                if (nr == -1) {
+                        break;
+                    }
+                statistics.addNumber(nr);
+                nr = Integer.valueOf(scanner.nextLine());       
+        }
+        System.out.println("Sum: " + statistics.sum());
+        System.out.println("Sum of even numbers: " + statistics.even());
+        System.out.println("Sum of odd numbers: " + statistics.odd());
+        
+
+
+
+
+  
+  
+  
+  
+
+  
+        /*   
         Agent_1 bond = new Agent_1("James", "Bond");
 
         bond.toString();
         System.out.println(bond);
 
         Agent_1 ionic = new Agent_1("Ionic", "Bond");
-        System.out.println(ionic);
-        
-    
-    
-    
-    
-    
-    
-    
+        System.out.println(ionic); */
     
     
         /*  DecreasingCounter counter = new DecreasingCounter(100);
