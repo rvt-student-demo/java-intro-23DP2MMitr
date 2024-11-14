@@ -1,13 +1,40 @@
 package lv.rvt;
 
+import java.io.BufferedReader;
 import java.util.*;
 
 public class App
 {
-public static void main( String[] args ) {
-        Scanner scanner = new Scanner(System.in);
+public static void main( String[] args) throws Exception {
+        BufferedReader reader = Utils.getReader("persons.csv");
+        ArrayList<Person> persons = new ArrayList<>();
 
-        PaymentCard paulsCard = new PaymentCard(20);
+        float average = 0;
+        int nr = 0;
+        String line;
+        reader.readLine();
+
+        while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(", ");
+            /*     System.out.println("Array: " + Arrays.toString(parts));  */
+                Person person = new Person(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
+            /*     System.out.println("CSV line: " + line); */
+                System.out.println(person);
+                average += person.returnAge();
+                persons.add(person);
+                nr++;
+        }
+
+        System.out.println("Average age: " + average / nr);
+
+
+     
+     
+     
+     
+     
+     
+        /*PaymentCard paulsCard = new PaymentCard(20);
         PaymentCard mattsCard = new PaymentCard(30);
 
         paulsCard.eatHeartily();
@@ -22,7 +49,7 @@ public static void main( String[] args ) {
         paulsCard.eatAffordably();
         mattsCard.addMoney(50);
         System.out.println(paulsCard);
-        System.out.println(mattsCard);
+        System.out.println(mattsCard);*/
 
 
         
