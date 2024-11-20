@@ -1,8 +1,11 @@
 package lv.rvt;
 
 import java.lang.reflect.Array;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Random;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 
 
@@ -20,7 +23,11 @@ public class PersonManager {
                 persons.add(person);
         }
         return persons;
-
-
+}
+    public static void addPerson(Person person) throws Exception{
+        BufferedWriter writer = Helper.getWriter("data.csv", StandardOpenOption.APPEND);
+        writer.write(person.toCsvRow());
+        writer.newLine();
+        writer.close(); 
     }
 }

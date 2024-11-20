@@ -1,18 +1,16 @@
 package lv.rvt;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class App
 {
 public static void main( String[] args) throws Exception {
-        // PersonManager pārbaude main metodē
-        // Jabūt printētam visam personam no csv faila
-        ArrayList<Person> persons = PersonManager.getPersonList();
-        for (Person person : persons) {
-                System.out.println(person);
-        }
-    
+
+        Person person = new Person("Gļebs", 1, 1, 2);
+        PersonManager.addPerson(person);
     
     
     
