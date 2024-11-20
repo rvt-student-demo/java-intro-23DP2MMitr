@@ -6,7 +6,23 @@ import java.util.*;
 public class App
 {
 public static void main( String[] args) throws Exception {
-        BufferedReader reader = Utils.getReader("persons.csv");
+        // PersonManager pārbaude main metodē
+        // Jabūt printētam visam personam no csv faila
+        ArrayList<Person> persons = PersonManager.getPersonList();
+        for (Person person : persons) {
+                System.out.println(person);
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        /*  BufferedReader reader = Helper.getReader("persons.csv");
         ArrayList<Person> persons = new ArrayList<>();
 
         float average = 0;
@@ -16,23 +32,17 @@ public static void main( String[] args) throws Exception {
 
         while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(", ");
-            /*     System.out.println("Array: " + Arrays.toString(parts));  */
+            /*     System.out.println("Array: " + Arrays.toString(parts));  
                 Person person = new Person(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
-            /*     System.out.println("CSV line: " + line); */
+                 System.out.println("CSV line: " + line); 
                 System.out.println(person);
                 average += person.returnAge();
                 persons.add(person);
                 nr++;
         }
 
-        System.out.println("Average age: " + average / nr);
+        System.out.println("Average age: " + average / nr); */
 
-
-     
-     
-     
-     
-     
      
         /*PaymentCard paulsCard = new PaymentCard(20);
         PaymentCard mattsCard = new PaymentCard(30);
