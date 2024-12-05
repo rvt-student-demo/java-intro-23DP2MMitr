@@ -5,9 +5,10 @@ public class Person {
     private int age;
     private int weight;
     private int height;
+    
 
     // Class constructor
-    public Person(String name, int age, int weight, int height){
+    public Person(String name, int age, int height, int weight){
         this.name = name;
         this.age = age;
         this.weight = weight;
@@ -39,6 +40,14 @@ public class Person {
     public String getName() {
         return this.name;
     }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public int plusWeight() {
+        return this.weight++;
+    }    
 
     public String toString() {
         return this.name + " " + this.age + " " + this.weight + " " + this.height;
