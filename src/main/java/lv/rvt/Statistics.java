@@ -1,4 +1,5 @@
 package lv.rvt;
+import java.util.*;
 
 public class Statistics {
     private int count;

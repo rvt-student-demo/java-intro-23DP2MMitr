@@ -9,11 +9,6 @@ public class Agent_1 {
         this.name = name;
         this.surname = surname;
     }
-
-    public static void (String name, S)
-    
-    
-    
     
     public String toString(){
         return "My name is " + surname + ", " + name + " " + surname;
