@@ -1,19 +1,23 @@
 package lv.rvt;
 
-public class CD {
-    private String author;
-    private String name;
+public class CD implements Packable {
+    private String artist;
+    private String title;
     private int year;
+    private double weight;
 
-    public CD(String author, String name, int year) {
-        this.author = author;
-        this.name = name;
+    public CD(String artist, String title, int year) {
+        this.artist = artist;
+        this.title = title;
         this.year = year;
+        this.weight = 0.1;
+    }
+
+    public double weight() {
+        return this.weight;
     }
 
     public String toString() {
-        return author + ": " + name + " (" + year + ")";
+        return artist + ": " + title + " (" + year + ")";
     }
-
-    
 }

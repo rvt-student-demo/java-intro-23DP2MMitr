@@ -1,6 +1,6 @@
 package lv.rvt;
 
-public class Book {
+public class Book implements Packable {
     private String author;
     private String name;
     private double weight;
@@ -9,6 +9,10 @@ public class Book {
         this.author = author;
         this.name = name;
         this.weight = weight;
+    }
+
+    public double weight() {
+        return this.weight;
     }
 
     public String toString() {
