@@ -1,32 +1,34 @@
 package lv.rvt;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class Box {
-    private double maxCapacity;
-    private List<Packable> items;
+public class Box implements Packable {
+	private double capacity;
+	private ArrayList<Packable> items;
 
-    public Box(double maxCapacity) {
-        this.maxCapacity = maxCapacity;
-        this.items = new ArrayList<>();
-    }
+	public Box(double capacity) {
+		this.capacity=capacity;
+		items = new ArrayList<>();
+	}
 
-    public void add(Packable element) {
-        if (currentWeight() + element.weight() <= maxCapacity) {
-            items.add(element);
-        }
-    }
 
-    public double currentWeight() {
-        double totalWeight = 0;
-        for (Packable element : items) {
-            totalWeight += element.weight();
-        }
-        return totalWeight;
-    }
+	public void add(Packable item) {
+		if (this.capacity >= item.weight()) {
+			items.add(item);
+			this.capacity -= item.weight();
+		}
+	}
 
-    public String toString() {
-        return "Box: " + items.size() + " items, total weight " + currentWeight() + " kg";
-    }
+	public double weight() {
+		double weight = 0;
+		for (Packable item: items) {
+			weight += item.weight();
+		}
+		return weight;
+	}
+
+    @Override
+	public String toString() {
+		return "Box: " + items.size() + " items, total weight " + weight() + " kg";
+	}
 }

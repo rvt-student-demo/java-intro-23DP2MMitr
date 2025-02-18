@@ -1,23 +1,22 @@
 package lv.rvt;
 
 public class CD implements Packable {
-    private String artist;
-    private String title;
-    private int year;
-    private double weight;
+	private String author;
+	private String name;
+	private int year;
 
-    public CD(String artist, String title, int year) {
-        this.artist = artist;
-        this.title = title;
-        this.year = year;
-        this.weight = 0.1;
-    }
+	public CD(String author, String name, int year) {
+		this.author = author;
+		this.name = name;
+		this.year = year;
+	}
 
-    public double weight() {
-        return this.weight;
-    }
+	public double weight(){
+		return 0.1;
+	};
 
-    public String toString() {
-        return artist + ": " + title + " (" + year + ")";
-    }
+	@Override
+	public String toString() {
+		return this.author + ": " + this.name + " (" + this.year + ")";
+	}
 }
